@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>reveal.js - The HTML Presentation Framework</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <section>
+        <h1>What to do when you get your data</h1>
+      </section>
+
+      <section>
+        <h2>Good Spreadsheet Formats</h2>
+        <ul>
+          <li>.xls</li>
+          <li>.xlsx</li>
+          <li>.ods</li>
+          <li>.csv</li>
+          <li>.tsv</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Bad Spreadsheet Formats</h2>
+        <h1 class="fragment"><strong>PDF</strong></h1>
+      </section>
+
+      <section>
+        <section>
+          <h2>Adverse Events Database</h2>
+          <p>Lists all self-reported errors, accidents and side effects as a result of treatment.</p>
+          <p>Download the Practice File: <a href="adverse_events.xlsx">BITLY</a></p>
+        </section>
+        <section>
+          <h3>We used it as part of <a href="http://www.nbcbayarea.com/investigations/CA-Hospitals-Make-Hundreds-of-Errors-Every-Year-Public-is-Unaware-283261121.html">this story.</a></h3>
+          <img src="images/adverse-events.story.png" alt="">
+        </section>
+      </section>
+
+      <section>
+        <h3>Basic Insights</h3>
+        <ul>
+          <li>Size of dataset</li>
+          <li>Types of data in each column</li>
+          <li>Whether data is missing or not</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>More advanced insights require subsetting or mainpulation</h2>
+        <li>What is the most common adverse effect?</li>
+        <li>How many adverse effects are there in a particular city?</li>
+        <li>Which hospitals have the most adverse effects?</li>
+        <li>Which year has the most adverse effects?</li>
+      </section>
+
+      <section>
+        <h2>Insights about data form the basis of stories</h2>
+        <p>A "basic" insight</p>
+        <blockquote cite="http://www.nbcbayarea.com/investigations/CA-Hospitals-Make-Hundreds-of-Errors-Every-Year-Public-is-Unaware-283261121.html">
+          According to the data, hospitals in California have reported 6,282 adverse events to the state in the last four fiscal years. They range from “death associated with an error”, to “stage 3 or 4 decubitus ulcer,” or bedsores.
+        </blockquote>
+      </section>
+
+      <section>
+        <h2>Subsetting</h2>
+        <p>Filtering and sorting.</p>
+        <p>We are not modifying the contents of cells or creating new ones.</p>
+      </section>
+
+      <section>
+        <p>A more advanced insight</p>
+        <blockquote cite="http://www.nbcbayarea.com/investigations/CA-Hospitals-Make-Hundreds-of-Errors-Every-Year-Public-is-Unaware-283261121.html">
+          Santa Clara Valley Medical Center (SCVMC) had a total of 64 adverse events, but 30 of those were “retention of a foreign object” in a patient during surgery, the most in the state during that time period.
+        </blockquote>
+      </section>
+
+      <section>
+        <h2>Let's get to the data</h2>
+      </section>
+
+      <section>
+        <section>
+          <h2>How to sort</h2>
+          <img src="images/filter.png" alt="" />
+          <aside class="notes">
+            Select any cell, not a range.
+            <br/> Home tab --> sort & filter --> Filter.
+          </aside>
+        </section>
+        <section>
+          <h2>Sort by fiscal year</h2>
+          <img src="images/sort-by-year.png" alt="">
+        </section>
+        <section>
+          <h2>Filter for 'Santa Clara Valley Medical Center'</h2>
+          <img src="images/filter-santa-clara.png" alt="">
+          <aside class="notes">Make sure to unselect "select all" before selecting the thing you want</aside>
+        </section>
+
+      </section>
+
+      <section>
+        <section>
+          <h2>How to format</h2>
+          <img src="images/format.png" />
+          <aside class="notes"> To format, highlight the column, and in the home menu click "Format". Then select date and appearance</aside>
+        </section>
+
+        <section>
+          <h3>Dates give you a lot of formatting options</h3>
+          <img src="images/date-format.png" alt="" />
+        </section>
+
+
+        <section>
+          <h2>Dates are not text</h2>
+          <h2>(and that's good!)</h2>
+          <p>You can do neat operations with them</p>
+          <img src="images/filter-dates.png" alt="" />
+        </section>
+
+      </section>
+
+      <section>
+        <h2>How to freeze</h2>
+        <img src="images/freeze.png" alt="">
+      </section>
+
+      <!-- PIVOT SECTION -->
+      <section>
+        <section>
+          <h2>How to pivot</h2>
+          <img src="images/pivot-start.png" alt="">
+        </section>
+        <section>
+          <h2>Put it in a new worksheet</h2><img src="images/pivot-confirm.png" alt=""></section>
+
+        <section>
+          <h2>The 'builder'</h2><img src="images/pivot-builder.png" alt="">
+          <aside class="notes">explain field list, filter, column labels, row labels, values.
+            <br/> For the most part you can only pay attention to row labels and values</aside>
+        </section>
+        <section>
+          <h2>The 'values' field</h2><img src="images/pivot-city-count.png" alt="">
+          <aside class="notes">The row will COMBINE rows that are categories. In the VALUES field you decide what operation you want to run on which columns. Defaults to count.</aside>
+        </section>
+
+        <section>
+					<h2>Sort the counts</h2>
+					<img src="images/pivot-sort.png" alt="" />
+					<aside class="notes">To sort, select a SINGLE CELL <br/> then data -->sort</aside>
+        </section>
+
+      </section>
+
+<section>
+			<section>
+				<h2>A more intersting pivot</h2>
+				<p>Which hospital has the most 'Retention of a foreign object in a patient'?</p>
+			</section>
+			<section>
+				<h2>Start a new pivot table</h2>
+				<h3>Then group by TWO lables</h3>
+				<img src="images/pivot-adv-2-rows.png" alt="" />
+				<aside class="notes">Order mattes here</aside>
+			</section>
+
+			<section>
+				<h2>Filter the row you want</h2>
+				<img src="images/pivot-adv-filter1.png" alt="">
+			</section>
+			<section>
+				<h2>Select the adverse effect</h2>
+				<img src="images/pivot-adv-filter2.png" alt="">
+				<aside class="notes">Take a moment before the next slide</aside>
+			</section>
+
+			<section>
+				<h2>Sort</h2>
+				<img src="images/pivot-adv-sort.png" alt="">
+			</section>
+
+			<section>
+				<h2>A bonus subset</h2>
+				<p>Double-click on any calculated cell</p>
+				<img src="images/pivot-adv-subset.png" alt="">
+			</section>
+
+</section>
+
+<section>
+	<h2>What else???</h2>
+	<p>There's a lot I didn't cover:</p>
+	<ul>
+		<li>Formulas</li>
+		<li>Splitting and adding columns</li>
+		<li>Stats</li>
+	</ul>
+	<aside class="notes">
+		subsets are powerful
+	</aside>
+</section>
+
+<section>
+	<h2>Download the slides: <a href="#">LINK</a></h2>
+	<p>Scott Pham</p>
+	<p><a href="mailto:scott.pham@nbcuni.com">scott.pham@nbcuni.com</a></p>
+</section>
+
+
+    </div>
+
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+      // Optional reveal.js plugins
+      dependencies: [{
+        src: 'lib/js/classList.js',
+        condition: function() {
+          return !document.body.classList;
+        }
+      }, {
+        src: 'plugin/markdown/marked.js',
+        condition: function() {
+          return !!document.querySelector('[data-markdown]');
+        }
+      }, {
+        src: 'plugin/markdown/markdown.js',
+        condition: function() {
+          return !!document.querySelector('[data-markdown]');
+        }
+      }, {
+        src: 'plugin/highlight/highlight.js',
+        async: true,
+        condition: function() {
+          return !!document.querySelector('pre code');
+        },
+        callback: function() {
+          hljs.initHighlightingOnLoad();
+        }
+      }, {
+        src: 'plugin/zoom-js/zoom.js',
+        async: true
+      }, {
+        src: 'plugin/notes/notes.js',
+        async: true
+      }]
+    });
+  </script>
+
+</body>
+
+</html>
