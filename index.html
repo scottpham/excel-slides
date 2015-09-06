@@ -62,19 +62,28 @@
       </section>
 
       <section>
-        <section>
-          <h2>Adverse Events Database</h2>
-          <p>Lists all self-reported errors, accidents and side effects as a result of treatment.</p>
-          <p>Download the Practice File: <a href="adverse_events.xlsx">http://scottpham.xyz/excel-slides/adverse_events.xlsx</a></p>
-        </section>
-        <section>
-          <h3>We used it as part of <a href="http://www.nbcbayarea.com/investigations/CA-Hospitals-Make-Hundreds-of-Errors-Every-Year-Public-is-Unaware-283261121.html">this story.</a></h3>
-          <img src="images/adverse-events.story.png" alt="">
-        </section>
+        <h2>Adverse Events Database</h2>
+        <p>Lists all self-reported errors, accidents and side effects as a result of treatment.</p>
+        <p>Download the sample file:
+          <br /> <a href="adverse_events.xlsx">http://bit.do/adverse-events</a></p>
+      </section>
+      <section>
+        <h3>We used it as part of <a href="http://www.nbcbayarea.com/investigations/CA-Hospitals-Make-Hundreds-of-Errors-Every-Year-Public-is-Unaware-283261121.html" target="_blank">this story.</a></h3>
+        <img src="images/adverse-events.story.png" alt="">
       </section>
 
       <section>
-        <h3>Basic Insights</h3>
+        <h2>Insights from data can form the basis of whole stories</h2>
+        <p>A "basic" insight</p>
+        <blockquote cite="http://www.nbcbayarea.com/investigations/CA-Hospitals-Make-Hundreds-of-Errors-Every-Year-Public-is-Unaware-283261121.html">
+          Hospitals in California have reported 6,282 adverse events to the state in the last four fiscal years. They range from “death associated with an error”, to “decubitus ulcers,” or bedsores.
+        </blockquote>
+        <aside class="notes">Takeaway: you can get this information by simply looking at the data and counting rows.</aside>
+      </section>
+
+
+      <section>
+        <h2>Basic insights</h2>
         <ul>
           <li>Size of dataset</li>
           <li>Types of data in each column</li>
@@ -82,37 +91,32 @@
         </ul>
       </section>
 
+
       <section>
-        <h2>More advanced insights require subsetting or mainpulation</h2>
+        <h2>More advanced insights require subsetting or manipulation</h2>
         <li>What is the most common adverse effect?</li>
         <li>How many adverse effects are there in a particular city?</li>
         <li>Which hospitals have the most adverse effects?</li>
         <li>Which year has the most adverse effects?</li>
       </section>
 
+
       <section>
-        <h2>Insights about data form the basis of stories</h2>
-        <p>A "basic" insight</p>
+        <h2>A more advanced insight:</h2>
         <blockquote cite="http://www.nbcbayarea.com/investigations/CA-Hospitals-Make-Hundreds-of-Errors-Every-Year-Public-is-Unaware-283261121.html">
-          According to the data, hospitals in California have reported 6,282 adverse events to the state in the last four fiscal years. They range from “death associated with an error”, to “stage 3 or 4 decubitus ulcer,” or bedsores.
+          Santa Clara Valley Medical Center had a total of 64 adverse events, but 30 of those were “retention of a foreign object” in a patient during surgery, the most in the state during that time period.
         </blockquote>
+      </section>
+
+      <section>
+        <h2>Let's get to the data</h2>
+        <aside class="notes">Open your spreadhseets. Link, if you forgot is bit.do/adverse-events</aside>
       </section>
 
       <section>
         <h2>Subsetting</h2>
         <p>Filtering and sorting.</p>
         <p>We are not modifying the contents of cells or creating new ones.</p>
-      </section>
-
-      <section>
-        <p>A more advanced insight</p>
-        <blockquote cite="http://www.nbcbayarea.com/investigations/CA-Hospitals-Make-Hundreds-of-Errors-Every-Year-Public-is-Unaware-283261121.html">
-          Santa Clara Valley Medical Center (SCVMC) had a total of 64 adverse events, but 30 of those were “retention of a foreign object” in a patient during surgery, the most in the state during that time period.
-        </blockquote>
-      </section>
-
-      <section>
-        <h2>Let's get to the data</h2>
       </section>
 
       <section>
@@ -183,67 +187,68 @@
         </section>
 
         <section>
-					<h2>Sort the counts</h2>
-					<img src="images/pivot-sort.png" alt="" />
-					<aside class="notes">To sort, select a SINGLE CELL <br/> then data -->sort</aside>
+          <h2>Sort the counts</h2>
+          <img src="images/pivot-sort.png" alt="" />
+          <aside class="notes">To sort, select a SINGLE CELL
+            <br/> then data -->sort</aside>
         </section>
 
       </section>
 
-<section>
-			<section>
-				<h2>A more intersting pivot</h2>
-				<p>Which hospital has the most 'Retention of a foreign object in a patient'?</p>
-			</section>
-			<section>
-				<h2>Start a new pivot table</h2>
-				<h3>Then group by TWO lables</h3>
-				<img src="images/pivot-adv-2-rows.png" alt="" />
-				<aside class="notes">Order mattes here</aside>
-			</section>
+      <section>
+        <section>
+          <h2>A more intersting pivot</h2>
+          <p>Which hospital has the most 'Retention of a foreign object in a patient'?</p>
+        </section>
+        <section>
+          <h2>Start a new pivot table</h2>
+          <h3>Group by TWO labels</h3>
+          <img src="images/pivot-adv-2-rows.png" alt="" />
+          <aside class="notes">Order matters here</aside>
+        </section>
 
-			<section>
-				<h2>Filter the row you want</h2>
-				<img src="images/pivot-adv-filter1.png" alt="">
-			</section>
-			<section>
-				<h2>Select the adverse effect</h2>
-				<img src="images/pivot-adv-filter2.png" alt="">
-				<aside class="notes">Take a moment before the next slide</aside>
-			</section>
+        <section>
+          <h2>Select the row you want to filter</h2>
+          <img src="images/pivot-adv-filter1.png" alt="">
+        </section>
+        <section>
+          <h2>Select the adverse effect</h2>
+          <img src="images/pivot-adv-filter2.png" alt="">
+          <aside class="notes">Take a moment before the next slide</aside>
+        </section>
 
-			<section>
-				<h2>Sort</h2>
-				<img src="images/pivot-adv-sort.png" alt="">
-			</section>
+        <section>
+          <h2>Sort</h2>
+          <img src="images/pivot-adv-sort.png" alt="">
+        </section>
 
-			<section>
-				<h2>A bonus subset</h2>
-				<p>Double-click on any calculated cell</p>
-				<img src="images/pivot-adv-subset.png" alt="">
-			</section>
+        <section>
+          <h2>A bonus subset</h2>
+          <p>Double-click on any calculated cell</p>
+          <img src="images/pivot-adv-subset.png" alt="">
+        </section>
 
-</section>
+      </section>
 
-<section>
-	<h2>What else???</h2>
-	<p>There's a lot I didn't cover:</p>
-	<ul>
-		<li>Formulas</li>
-		<li>Splitting and adding columns</li>
-		<li>Stats</li>
-	</ul>
-	<aside class="notes">
-		subsets are powerful
-	</aside>
-</section>
+      <section>
+        <h2>What else???</h2>
+        <p>There's a lot I didn't cover:</p>
+        <ul>
+          <li>Formulas</li>
+          <li>Splitting and adding columns</li>
+          <li>Stats</li>
+        </ul>
+        <aside class="notes">
+          subsets are powerful
+        </aside>
+      </section>
 
-<section>
-	<h2>Download the slides</h2>
-	<h3><a href="http://scottpham.xyz/excel-slides/">http://scottpham.xyz/excel-slides/</a></h3>
-	<p>Scott Pham</p>
-	<p><a href="mailto:scott.pham@nbcuni.com">scott.pham@nbcuni.com</a></p>
-</section>
+      <section>
+        <h2>Download the slides</h2>
+        <h3><a href="http://scottpham.xyz/excel-slides/">http://scottpham.xyz/excel-slides/</a></h3>
+        <p>Scott Pham</p>
+        <p><a href="mailto:scott.pham@nbcuni.com">scott.pham@nbcuni.com</a></p>
+      </section>
 
 
     </div>
@@ -266,6 +271,11 @@
 
       // Optional reveal.js plugins
       dependencies: [{
+        src: 'socket.io/socket.io.js',
+        async: true
+      }, {
+        src: 'plugin/notes-server/client.js'
+      }, {
         src: 'lib/js/classList.js',
         condition: function() {
           return !document.body.classList;
